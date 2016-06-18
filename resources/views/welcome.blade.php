@@ -38,7 +38,8 @@
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">Laravel 5</div>
+                <div class="title">Welcome Everyone!</div>
+                <p>This is the beginning of our Laravel journey</p>
             </div>
         </div>
     </body>
