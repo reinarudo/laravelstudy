@@ -16,15 +16,6 @@ fr rey:
 always remember to put the most viewed page here since laravel will go through the elements until it finds a match
 */
 
-Route::get('contact', function () {
-    return view('contact');
-});
-
-Route::get('about', function () {
-    return view('about');
-});
-
-
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('contact', 'PagesController@getContact');
+Route::get('about', 'PagesController@getAbout');
+Route::get('/', 'PagesController@getIndex');
