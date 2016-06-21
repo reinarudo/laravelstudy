@@ -14,7 +14,9 @@ class CreatePostsTable extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->increments('id');
-            $table->timestamps();
+            $table->string('title');
+            $table->text('body');
+            $table->timestamps(); //this will automatically create created_at and updated_at columns - refer to laravel documentations
         });
     }
 
