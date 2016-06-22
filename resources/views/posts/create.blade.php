@@ -9,7 +9,7 @@
             <hr>
 
             <!-- the following form will automatically create a csrf protection -->
-            {!! Form::open(array('url' => 'posts.store')) !!}
+            {!! Form::open(array('route' => 'posts.store')) !!}
                 {{ Form::label('title', 'Title:') }}
                 {{ Form::text('title', null, array('class' => 'form-control')) }}
 
