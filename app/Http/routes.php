@@ -12,10 +12,18 @@
 */
 
 /*
-fr rey:
-always remember to put the most viewed page here since laravel will go through the elements until it finds a match
+*
+* fr rey:
+* always remember to put the most viewed page here since laravel will go through the elements until it finds a match
 */
 
 Route::get('contact', 'PagesController@getContact');
 Route::get('about', 'PagesController@getAbout');
 Route::get('/', 'PagesController@getIndex');
+
+/**
+ * fr rey:
+ * tell laravel that we manage our resource so we do not need to specify all the routes because it
+ * assumes that the routes already contain the necessary methods e.g. create, store, edit, edit, update etc...
+ */
+Route::resource('posts', 'PostController');
