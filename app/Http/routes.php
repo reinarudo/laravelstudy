@@ -18,7 +18,7 @@
 */
 Route::get('blog/{slug}', array('as' => 'blog.single', 'uses' => 'BlogController@getSingle'))
         ->where('slug', '[\w\d\-\_]+'); // create a rule for slug that only accepts words, digits, dashes and underscores
-
+Route::get('blog', array('as' => 'blog.index', 'uses' => 'BlogController@getIndex'));
 Route::get('contact', 'PagesController@getContact');
 Route::get('about', 'PagesController@getAbout');
 Route::get('/', 'PagesController@getIndex');
