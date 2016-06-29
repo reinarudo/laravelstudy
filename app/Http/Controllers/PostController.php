@@ -10,6 +10,11 @@ use Session; //session
 
 class PostController extends Controller
 {
+    public function __construct(){
+        $this->middleware('auth'); //everything will be protected by the middleware
+    }
+
+
     /**
      * Display a listing of the resource.
      *

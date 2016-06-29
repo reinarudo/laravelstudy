@@ -37,7 +37,10 @@ class AuthController extends Controller
      */
     public function __construct()
     {
-        $this->middleware($this->guestMiddleware(), ['except' => 'logout']);
+        //prohibit a guest from accessing logout page
+        //if a user has been authenticated redirect to root page except if they access logout page: only allow guest
+        //by using the guest middleware app\Http\Middleware\RedirectIfAuthenticated.php
+        $this->middleware($this->guestMiddleware(), ['except' => 'getLogout']);
     }
 
     /**

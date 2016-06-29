@@ -21,7 +21,8 @@ class Authenticate
             if ($request->ajax() || $request->wantsJson()) {
                 return response('Unauthorized.', 401);
             } else {
-                return redirect()->guest('login');
+                //From Rey: creates a current URL session and returns back to URL after successfully logged in
+                return redirect()->guest('auth/login');
             }
         }
 
