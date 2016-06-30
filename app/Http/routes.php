@@ -31,6 +31,9 @@ Route::get('password/reset/{token?}', 'Auth\PasswordController@showResetForm'); 
 Route::post('password/email', 'Auth\PasswordController@sendResetLinkEmail');
 Route::post('password/reset', 'Auth\PasswordController@reset');
 
+//Categories
+Route::resource('categories', 'CategoryController', array('except' => array('create')));
+
 Route::get('blog/{slug}', array('as' => 'blog.single', 'uses' => 'BlogController@getSingle'))
         ->where('slug', '[\w\d\-\_]+'); // create a rule for slug that only accepts words, digits, dashes and underscores
 Route::get('blog', array('as' => 'blog.index', 'uses' => 'BlogController@getIndex'));
